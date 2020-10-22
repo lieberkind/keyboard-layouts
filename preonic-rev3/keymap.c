@@ -22,7 +22,8 @@ enum preonic_layers {
   _LOWER,
   _RAISE,
   _SYMBOLS,
-  _ADJUST
+  _ADJUST,
+  _MEDIA
 };
 
 enum preonic_keycodes {
@@ -38,6 +39,7 @@ enum preonic_keycodes {
 const uint16_t NEXT_TAB = LGUI(LALT(KC_RIGHT));
 const uint16_t PREV_TAB = LGUI(LALT(KC_LEFT));
 const uint16_t SYMBOLS = MO(_SYMBOLS);
+const uint16_t MEDIA = MO(_MEDIA);
 const uint16_t ALFRED = LCTL(KC_U);
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -74,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB , KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH, \
   SYMBOLS, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_MINS, \
   KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT, \
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,  _______,  KC_SPC,  RAISE,   KC_ENT,  _______, _______, _______  \
+  MEDIA  , KC_LCTL, KC_LALT, KC_LGUI, LOWER,  _______,  KC_SPC,  RAISE,   KC_ENT,  _______, _______, _______  \
 ),
 
 /* Lower
@@ -138,6 +140,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, ALFRED , _______, _______, _______, _______, KC_LCBR, KC_RCBR, KC_PLUS, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, KC_PIPE, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
+),
+
+[_MEDIA] = LAYOUT_preonic_grid( \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, KC_MPLY, KC_VOLU, _______, KC_BRIU, _______, \
+  _______, _______, _______, _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT, KC_BRID, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  \
 ),
 
 /* Adjust (Lower + Raise)
