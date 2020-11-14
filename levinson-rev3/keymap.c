@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
  [_SYMBOL] = LAYOUT_ortho_4x12( \
   KC_GRAVE,KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_PAST, KC_LPRN, KC_RPRN, KC_EQUAL, \
-  _______, _______, _______, _______, ALFRED , _______, _______, _______, _______, KC_LCBR, KC_RCBR, KC_PLUS, \
+  _______, _______, _______, _______, ALFRED , _______, _______, KC_SLSH, KC_QUES, KC_LCBR, KC_RCBR, KC_PLUS, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, KC_PIPE, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_TILD, _______, KC_BSLS \
 ),
