@@ -30,8 +30,8 @@ enum custom_keycodes {
   RGBRST
 };
 
-const uint16_t P_TAB = LGUI(LALT(KC_RIGHT));
-const uint16_t N_TAB = LGUI(LALT(KC_LEFT));
+const uint16_t N_TAB = LGUI(LALT(KC_RIGHT));
+const uint16_t P_TAB = LGUI(LALT(KC_LEFT));
 
 enum macro_keycodes {
   KC_SAMPLEMACRO,
